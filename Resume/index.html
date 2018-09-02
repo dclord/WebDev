@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Responsive layout -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS-->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <!-- jQuery, JavaScript & PopperJS-->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Script - Smooth Scrolling -->
+    <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
+            
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+            
+                  // Store hash
+                  var hash = this.hash;
+            
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+               
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });
+    </script>
+    <!-- Script - Smooth Scroll - Top Page -->
+    <script>
+    $(document).ready(function(){ 
+        $(window).scroll(function(){ 
+            if ($(this).scrollTop() > 100) { 
+                $('#scroll').fadeIn(); 
+            } else { 
+                $('#scroll').fadeOut(); 
+            } 
+        }); 
+        $('#scroll').click(function(){ 
+            $("html, body").animate({ scrollTop: 0 }, 600); 
+            return false; 
+        }); 
+    });
+    </script>
+    <!-- Script - Skill Bar -->
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('.skillbar').each(function(){
+            jQuery(this).find('.skillbar-bar').animate({
+                width:jQuery(this).attr('data-percent')
+            },6000);
+        });
+    });
+    </script>
+
+    <title>Dan Lord CV</title>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav id="navid" class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand name" href="index.html">Dan Lord</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="menufade" href="#aboutme">About Me</a></li>
+          <li><a class="menufade" href="#skills">Skills</a></li>
+          <li><a class="menufade" href="#experience">Experience</a></li>
+          <li><a class="menufade" href="#education">Education</a></li>
+          <li><a class="menufade" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <a href="#" id="scroll" style="display: none;"><span></span></a>
+
+  <!-- First Container -->
+  <div id="aboutme" class="bg-1 container-fluid text-center">
+    <div class="aboutmeimg aboutmefloat">
+        <a href="index.html">
+        <img src="img/me.jpg" class="img-circle person" style="display:inline" alt="Me" width="250" height="250">
+        </a>
+    </div>
+    <div class="aboutmetext aboutmefloat">
+        <h3 class="margin">Welcome!</h3>
+        <p>Bio</p>        
+    </div>
+  </div>
+  
+
+
+  <!-- Second Container -->
+  <div id="skills" class="container-fluid bg-2 text-center">
+    <h3 class="margin">Key Skills</h3>
+    <div class="skillbars col-sm-4">
+        <div class="skillbar clearfix " data-percent="70%">
+            <div class="skillbar-title" style="background: #88cd2a;"><span>Leadership</span></div>
+            <div class="skillbar-bar" style="background: #88cd2a;"></div>
+            <div class="skill-bar-percent">70%</div>
+        </div>
+        <div class="skillbar clearfix " data-percent="40%">
+                <div class="skillbar-title" style="background: #2c0aa7;"><span>Management</span></div>
+                <div class="skillbar-bar" style="background: #2c0aa7;"></div>
+                <div class="skill-bar-percent">40%</div>
+        </div>
+    </div>
+    <div class="skillbars col-sm-4">
+            <div class="skillbar clearfix " data-percent="70%">
+                <div class="skillbar-title" style="background: #88cd2a;"><span>People Management</span></div>
+                <div class="skillbar-bar" style="background: #88cd2a;"></div>
+                <div class="skill-bar-percent">70%</div>
+            </div>
+            <div class="skillbar clearfix " data-percent="40%">
+                    <div class="skillbar-title" style="background: #2c0aa7;"><span>Management</span></div>
+                    <div class="skillbar-bar" style="background: #2c0aa7;"></div>
+                    <div class="skill-bar-percent">40%</div>
+            </div>
+    </div>
+    <div class="skillbars col-sm-4">
+            <div class="skillbar clearfix " data-percent="70%">
+                <div class="skillbar-title" style="background: #88cd2a;"><span>Internal Auditing</span></div>
+                <div class="skillbar-bar" style="background: #88cd2a;"></div>
+                <div class="skill-bar-percent">70%</div>
+            </div>
+            <div class="skillbar clearfix " data-percent="40%">
+                    <div class="skillbar-title" style="background: #2c0aa7;"><span>Management</span></div>
+                    <div class="skillbar-bar" style="background: #2c0aa7;"></div>
+                    <div class="skill-bar-percent">40%</div>
+            </div>
+    </div>
+
+
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  </div>
+  
+  <!-- Third Container (Grid) -->
+  <div id="experience" class="container-fluid bg-3 text-center">    
+    <h3 class="margin">Experience</h3><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-4"> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      </div>
+      <div class="col-sm-4"> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      </div>
+    </div>
+  </div>
+
+<!-- Fourth Container -->
+<div id="education" class="container-fluid bg-4 text-center">
+    <h3 class="margin">Education</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    </div>
+
+<!-- Fifth Container -->
+  <div id="contact" class="container-fluid bg-5 text-center">
+    <h3 class="margin">Contact Me</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+  </div>
+  
+  <!-- Footer -->
+  <footer class="container-fluid bg-6 text-center">
+        <a href="#" class="fa fa-linkedin"></a>    
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+  </footer>
+  
+  </body>
+  </html>
